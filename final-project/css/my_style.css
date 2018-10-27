@@ -4,6 +4,20 @@
 
 }
 
+.hockey-background{
+    width: 100%;
+    height: 500px;
+}
+
+.fixed-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: black;
+}
+
 li{
    
     border-style: solid;
@@ -18,19 +32,41 @@ li{
 
 .head-container {
     position: relative;
+    
 }
 
 /* Bottom right text */
 .head-text{
     position: absolute;
     bottom: 50%;
-    right: 50%;
+    right: 40%;
     background-color: black;
     color: white;
     padding-left: 20px;
     padding-right: 20px;
 }
 
+.hockey-background-content{
+    position: absolute;
+    color: black;
+    bottom: 50%;
+    right: 40%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.hockey-sub-head{
+    position: absolute;
+    bottom: 50%;
+    right: 8%;
+}
+
+.hockey-content{
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
 .head-nav{
     display: flex;
     justify-content: center;
@@ -39,6 +75,12 @@ li{
     color: black;
 
 
+}
+
+.activity-nav{
+    display: flex;
+    justify-content: center;
+    background-color: black;
 }
 
 .resume{
@@ -63,7 +105,8 @@ iframe{
 
 .profile-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
+    align-items: flex-start;
     background-color: gray;
    
 }
@@ -79,9 +122,8 @@ iframe{
 
 .profile-content{
     display: flex;
-    width: 60%;
-    align-items: flex-start;
-    justify-content: center;
+    /* width: 60%; */
+    align-items: center;
     flex-direction: column;
 }
 
@@ -89,6 +131,7 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
 }
 
 .profile-description{
@@ -102,8 +145,39 @@ body{
     background-color: darkgoldenrod;
 }
 
+.activity-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .1cm;
+    border-color: white;
+    border-style: solid;
+    background-color: gray;
+}
+
 footer{
     display: flex;
     justify-content: center;
     background-color:grey;
+}
+
+@media screen and (max-width: 400px) {
+    .profile-container {
+        background-color: lightsalmon;
+    }
+}
+@media screen and (max-width: 400px) {
+    .resume-header{
+        background-color: purple;
+    }
+}
+@media screen and (max-width: 600px) {
+    .hockey-background-content{
+        background-color: lightgreen;
+    }
+}
+@media screen and (max-width: 600px) {
+    .hockey-sub-head{
+        background-color: blue;
+    }
 }
