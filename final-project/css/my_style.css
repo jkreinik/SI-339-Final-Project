@@ -9,14 +9,6 @@
     height: 500px;
 }
 
-.fixed-top{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    background-color: black;
-}
 
 li{
    
@@ -32,10 +24,11 @@ li{
 
 .head-container {
     position: relative;
+    z-index: -1;
     
 }
 
-/* Bottom right text */
+
 .head-text{
     position: absolute;
     bottom: 50%;
@@ -46,42 +39,40 @@ li{
     padding-right: 20px;
 }
 
+
 .hockey-background-content{
     position: absolute;
-    color: black;
     bottom: 50%;
-    right: 40%;
+    right: 10%;
+    left: 10%;
+    background-color: white;
+    color: blue;
     padding-left: 20px;
     padding-right: 20px;
 
 }
 
 .hockey-sub-head{
-    position: absolute;
-    bottom: 50%;
-    right: 8%;
+    display: flex;
+    justify-content: center;
+   
 }
 
 .hockey-content{
     display: flex;
     justify-content: flex-end;
     text-align: center;
-}
-.head-nav{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: black;
+} 
+.access{
     color: black;
-
-
+    z-index: 1040;
+    background-color: white;
+}
+.access:hover{
+    color: white;
 }
 
-.activity-nav{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-}
+
 
 .resume{
     display: flex;
@@ -111,8 +102,14 @@ iframe{
    
 }
 
-.profile-pic {
-    width: 40%;
+#Prof{
+    display: flex;
+    justify-content: center;
+}
+
+.profile {
+    width: 350px;
+    height: 450px;
 }
 
 .intro{
@@ -138,6 +135,8 @@ iframe{
     display: flex;
     align-self: center;
     justify-self: flex-start;
+    padding-right: 10%;
+    padding-left: 10%;
 
 } 
 
@@ -145,39 +144,100 @@ body{
     background-color: darkgoldenrod;
 }
 
-.activity-head{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: .1cm;
-    border-color: white;
-    border-style: solid;
-    background-color: gray;
-}
 
 footer{
     display: flex;
     justify-content: center;
-    background-color:grey;
+    background-color: gray;
 }
 
-@media screen and (max-width: 400px) {
-    .profile-container {
+.current{
+    text-transform: uppercase;
+    color: red;
+}
+
+
+.flip {
+    height: 199px;
+    width: 300px;
+    margin: 0 auto;
+}
+.flip img {
+    width: 300px;
+    height: auto;
+    padding-bottom: 20px;
+}
+.flip .back {
+    background:white;
+    color:red;
+    font-size: 75%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.UBS-header{
+    display: flex;
+    justify-content: center;
+    color: red;
+    background-color: white;
+}
+
+.panel p{
+    color: red;
+}
+
+
+.accordion {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color:red;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  .ubs-text{
+      display: flex;
+      justify-content: center;
+  }
+
+@media screen and (max-width: 500px) {
+    .profile-content {
         background-color: lightsalmon;
     }
 }
-@media screen and (max-width: 400px) {
-    .resume-header{
-        background-color: purple;
+@media screen and (max-width: 500px) {
+    .profile{
+        width: 200px;
+        height: 400px;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 350px) {
     .hockey-background-content{
-        background-color: lightgreen;
+        background-color: white;
+        color: black;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 350px) {
     .hockey-sub-head{
-        background-color: blue;
+        background-color: white;
+        color: black;
     }
 }
